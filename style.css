@@ -38,6 +38,6 @@ h4 {
 /* for screen width less than 700px */
 @media(max-width: 700px) {
     #time {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 }
