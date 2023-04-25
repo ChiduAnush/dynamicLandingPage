@@ -41,6 +41,8 @@ function setgreet() {
         greeting.textContent = "good afternoon"
     } else {
         greeting.textContent = "good evening"
+        document.body.style.backgroundColor = '#141414'
+        document.body.style.color = 'white'
     }
 
 }
