@@ -19,9 +19,15 @@ function showTime() {
     hour = hour % 12 || 12
 
     //final time output
-    time.innerHTML = `${hour}:${min}:${seconds}`
+    time.innerHTML = `${hour}:${addZero(min)}:${addZero(seconds)}`
     setTimeout(showTime, 1000) //(functionToBeCalled, no. of milliseconds interval)
 }
+
+//function to add redundant zeroes for looks
+function addZero(n) {
+    return (parseInt(n, 10) < 10 ? '0' : '') + n
+}
+
 
 //run
 showTime()
