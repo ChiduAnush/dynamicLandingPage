@@ -19,7 +19,7 @@ function showTime() {
     hour = hour % 12 || 12
 
     //final time output
-    time.innerHTML = `${hour}:${addZero(min)}:${addZero(seconds)}`
+    time.innerHTML = `${hour}:${addZero(min)}:${addZero(seconds)} ${ampm}`
     setTimeout(showTime, 1000) //(functionToBeCalled, no. of milliseconds interval)
 }
 
@@ -29,5 +29,23 @@ function addZero(n) {
 }
 
 
+//to show greeting based on time(hour)
+function setgreet() {
+    let today = new Date(),
+        hour = today.getHours()
+
+
+    if (hour < 12) {
+        greeting.textContent = "good morning"
+    } else if (hour < 16) {
+        greeting.textContent = "good afternoon"
+    } else {
+        greeting.textContent = "good evening"
+    }
+
+}
+
+
 //run
 showTime()
+setgreet()
